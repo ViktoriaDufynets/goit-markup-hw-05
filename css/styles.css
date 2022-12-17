@@ -583,6 +583,7 @@ span {
 
 .card {
         position: relative;
+        overflow: hidden;
         background: #FFFFFF;
         height: 420px;
         margin-bottom: 48px;
@@ -635,28 +636,32 @@ span {
 }
 .image-wrapper {
         position: absolute;
-        top: 0;
         width: 360px;
         height: 300px;
+        top: 300px;
         background: #4D5AE5;
         background-blend-mode: soft-light;
         mix-blend-mode: normal;
         opacity: 0;
-        transition-property: opacity;
+        transition-property: top;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.image-wrapper:hover {
-        opacity: 1;
-        
+.card:hover .image-wrapper, .card:focus .image-wrapper{
+        top: 0;
+        opacity: 1;       
 }
 
+.works {
+        text-decoration: none;
+}
 
 .link-tab {
         padding: 0;
         margin: 0;
 }
 .titles {
+        overflow: hidden;
         padding-top: 32px;
         padding-right: 53px;
         padding-bottom: 32px;
